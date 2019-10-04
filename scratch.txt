@@ -1,0 +1,74 @@
+Just some stuff.
+_______________
+DB Schema ideas
+_______________
+
+Users--------------
+id          Integer
+username    String
+email       String
+password    String
+deviceid    Integer
+createdon   Date
+lastlogin   Date
+props       JSON
+-------------------
+Locations----------
+id          Integer
+lat         Float
+long        Float
+elev        Float
+timestamp   Date
+userid      Integer
+envcondid   Integer
+props       JSON
+-------------------
+Devices------------
+id          Integer
+name        String
+props       JSON
+userid      Integer
+-------------------
+GameObjects--------
+id          Integer
+gamestate   JSONB
+game        JSONB
+-------------------
+EnvironmentalConditions
+id          Integer
+temp        Float
+clouds      String
+moonphase   String
+weatherinfo JSON
+-----------------------
+Admin--------------
+id          Integer
+props       JSON
+-------------------
+DebugLog-----------
+id          Integer
+table       String
+keyval      Integer
+column      String
+oldvalue    String
+newvalue    String
+timestamp   Date
+
+
+___________________________________
+GameObjects
+a big ol JSON array
+{
+    gameClass: {
+        runer
+    },
+    spells: {
+
+    },
+    templesVisited: {
+
+    },
+    baseCamp: {
+
+    }
+}
